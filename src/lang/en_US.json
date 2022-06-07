@@ -1,0 +1,14 @@
+{
+  "find_match": "Find your match",
+  "search": {
+    "gender_title": "What are you looking for?",
+    "gender_woman": "Woman",
+    "gender_man": "Man",
+    "age_title": "What age do you prefer?",
+    "distance_title": "Distance between you and partner?",
+    "make_choice": "Make a choice!",
+    "btn_act": "SEARCH"
+  },
+  "matches_found": "Matches found",
+  "look_matches": "Look matches"
+}

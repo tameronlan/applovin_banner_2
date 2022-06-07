@@ -1,0 +1,109 @@
+@import "vars";
+@import "mixins";
+@import "ico";
+@import "ripple-effect";
+
+.app * {
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
+.link{
+    text-decoration: underline;
+    color: $color-blue-2;
+}
+
+textarea {
+    -webkit-touch-callout: auto !important;
+    -webkit-user-select: auto !important;
+    user-select: auto !important;
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+    background: #F3F8FF;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-xm;
+    font-weight: $font-wn;
+    margin: 0;
+    color: $color-gray6;
+}
+
+.button{
+    display: block;
+    border-radius: 10px;
+    background: linear-gradient(90.98deg, #FF7354 -2.58%, #FF3052 50.58%, #FF1B5F 106.2%);
+    font-size: 24px;
+    text-align: center;
+    padding: 12px 20px;
+    line-height: 44px;
+    font-weight: bold;
+    color: $color-white;
+    transition: all .1s linear;
+
+    &.touch, &:active{
+        transform: scale(.98);
+    }
+
+    &_disabled, &:disabled{
+        background: #94A1AF;
+
+        &.touch, &:active{
+            pointer-events: none;
+            touch-action: none;
+            transform: scale(1);
+        }
+    }
+
+    &_big{
+        padding: 20px 32px;
+        line-height: 40px;
+        font-size: 32px;
+    }
+}
+
+.fade-slide-enter-active, .fade-slide-leave-active {
+    transition: all 0.2s ease-out;
+}
+
+.fade-slide-enter, .fade-slide-leave-to {
+    opacity: 0;
+    transform: translate(0, -10px);
+}
+
+@import "file-directive";
+@import "touch-directive";
+@import "text";
+@import "input";
+
+@import "components/start";
+@import "components/search";
+@import "components/finish";
+
+@media screen and (max-height: 500px) {
+    .button{
+        font-size: 20px;
+        line-height: 32px;
+        padding: 8px 12px;
+    }
+
+    .button_big{
+        padding: 12px 18px;
+        line-height: 32px;
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "find_match": "Encuentra tu pareja",
+    "search": {
+        "gender_title": "Qué estás buscando?",
+        "gender_woman": "Mujer",
+        "gender_man": "Hombre",
+        "age_title": "Qué edad prefieres?",
+        "distance_title": "Distancia entre usted y su pareja?",
+        "make_choice": "Tomar una decisión!",
+        "btn_act": "BÚSQUEDA"
+    },
+    "matches_found": "Unas parejas encontradas",
+    "look_matches": "Mira coincidencias"
+}

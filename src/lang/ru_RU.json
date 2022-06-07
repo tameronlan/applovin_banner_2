@@ -1,0 +1,14 @@
+{
+  "find_match": "Найди пару",
+  "search": {
+    "gender_title": "Кого ты ищешь?",
+    "gender_woman": "Девушку",
+    "gender_man": "Парня",
+    "age_title": "Предпочитаемый возраст?",
+    "distance_title": "Расстояние между вами?",
+    "make_choice": "Сделать выбор!",
+    "btn_act": "ПОИСК"
+  },
+  "matches_found": "Пара найдена",
+  "look_matches": "Смотреть список"
+}

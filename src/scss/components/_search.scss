@@ -1,0 +1,254 @@
+.banner-search {
+    position: absolute;
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F3F8FF;
+    padding: 32px 24px 36px;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    transition: opacity .1s linear, transform .1s linear;
+
+    overflow-x: hidden;
+
+    &_hidden{
+        opacity: 0;
+        transform: scale(.99);
+    }
+
+    &-field {
+        margin-bottom: 38px;
+
+        &__title {
+            margin-bottom: 22px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #1d1d1d;
+            text-align: center;
+        }
+    }
+
+    &-genders {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    &-gender-btn {
+        width: 144px;
+        height: 144px;
+        border-radius: 20px;
+        margin: 0 10px;
+        background: #E3ECF5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #646B7D;
+        font-size: 22px;
+        font-weight: 600;
+        flex-direction: column;
+        transition: all .1s linear;
+
+        &.touch, &:active {
+            transform: scale(.95);
+        }
+
+        &_activated {
+            color: #ffffff;
+            box-shadow: 0px 41.0197px 36.1939px -28.3519px rgba(0, 24, 107, 0.25);
+            transform: scale(1.02);
+        }
+
+        &_man.banner-search-gender-btn_activated {
+            background: #77ADFF;
+        }
+
+        &_woman.banner-search-gender-btn_activated {
+            background: #FF8383;
+        }
+    }
+
+    &-slogan {
+        margin-bottom: 38px;
+        font-size: 28px;
+        color: #1d1d1d;
+        text-align: center;
+        font-weight: bold;
+
+        .banner-title-underline {
+            margin: -8px 0;
+        }
+
+        &_animated{
+            animation: start-button-animation 1s linear infinite;
+
+            @keyframes start-button-animation {
+                25% {
+                    transform: scale(.98);
+                }
+
+                75% {
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+
+    .vue-slider {
+        padding-top: 18px!important;
+    }
+
+    .vue-slider-rail {
+        background: #D5DCF3;
+        border-radius: 3px;
+        height: 6px;
+    }
+
+    .vue-slider-process {
+        background: #FF2F51;
+        border-radius: 3px;
+    }
+
+    .vue-slider-dot {
+        background: #fff;
+        border-radius: 50%;
+        width: 23px!important;
+        height: 23px!important;
+        box-shadow: 0 0 0 2px #FF2F51;
+    }
+
+    .vue-slider-dot-tooltip-text{
+        white-space: nowrap;
+        font-size: 15px;
+    }
+
+    .vue-slider-dot-tooltip-top{
+        top: -4px;
+    }
+
+    .vue-slider{
+        margin-top: 14px;
+    }
+
+    &-pointer{
+        position: absolute;
+    }
+
+    &-actions{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        background: linear-gradient(to top, rgba(#F3F8FF, 1) 0%, rgba(#F3F8FF, 1) 92%, rgba(#F3F8FF, 0) 100%);
+        padding: 20px 20px 20px;
+    }
+
+    &-actions__pointer{
+        position: absolute;
+        left: 60%;
+        top: 15%;
+        margin-top: -30px;
+        pointer-events: none;
+        touch-action: none;
+        transform: translate(50px, -50px) rotate(-30deg) scale(.5);
+        animation: start-pointer-animation 2s cubic-bezier(.11,1.46,.63,1.26) infinite;
+    }
+}
+
+@keyframes start-pointer-animation {
+    0% {
+        opacity: 1;
+        transform: translate(50px, -50px) rotate(-30deg) scale(.5);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-25deg) scale(.5);
+    }
+
+    30% {
+        opacity: 1;
+        transform: rotate(-25deg) scale(.5);
+    }
+
+    40% {
+        opacity: 1;
+        transform: rotate(-25deg) scale(.5);
+    }
+
+    50%, 100%{
+        opacity: 0;
+        transform: rotate(-25deg) scale(.5);
+    }
+
+}
+
+@media screen and (max-height: 640px) {
+    .banner-search{
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .banner-search-slogan{
+        margin-bottom: 20px;
+    }
+
+    .banner-search-field{
+        margin-bottom: 20px;
+    }
+
+    .banner-search-field__title{
+        margin-bottom: 12px;
+    }
+
+    .banner-search-slogan{
+        font-size: 24px;
+    }
+
+    .banner-search-gender-btn{
+        width: 100px;
+        height: 100px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    .banner-search-gender-btn__icn svg{
+        width: 52px;
+        height: 52px;
+    }
+
+}
+
+
+@media screen and (max-width: 370px) {
+    .banner-search-field__actions{
+        padding-bottom: 10px;
+    }
+
+    .banner-search-field__title{
+        font-size: 16px;
+    }
+
+    .vue-slider-dot-tooltip-text{
+        font-size: 12px!important;
+    }
+
+    .banner-search-gender-btn__title{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .banner-search-field__title{
+        font-size: 14px;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+}

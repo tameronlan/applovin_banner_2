@@ -1,0 +1,14 @@
+{
+    "find_match": "Encontre sua correspondência",
+    "search": {
+        "gender_title": "O que você está procurando?",
+        "gender_woman": "Mulher",
+        "gender_man": "Homem",
+        "age_title": "Qual idade você prefere?",
+        "distance_title": "Distância entre você e o parceiro?",
+        "make_choice": "Faça uma escolha!",
+        "btn_act": "PROCURAR"
+    },
+    "matches_found": "Par encontrado",
+    "look_matches": "Look combina"
+}

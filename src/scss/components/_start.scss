@@ -1,0 +1,89 @@
+.banner-start{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #F3F8FF;
+
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    &__button{
+        animation: start-button-animation 2s linear infinite;
+        position: absolute;
+        top: 50%;
+        left: 28px;
+        right: 28px;
+        margin-top: - env(safe-area-inset-top);
+
+        @keyframes start-button-animation {
+            25% {
+                transform: scale(.97);
+            }
+
+            75% {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    &_hidden{
+        opacity: 0;
+        transform: scale(.99);
+    }
+
+    &-pointer{
+        position: absolute;
+        left: 55%;
+        top: 47%;
+        animation: start-pointer-animation 2s cubic-bezier(.11,1.46,.63,1.26) infinite;
+        pointer-events: none;
+        touch-action: none;
+    }
+
+    &__user{
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #ccc;
+        box-shadow: 0 16px 20px rgba(0, 24, 107, 0.25);
+        border-radius: 50%;
+        transition: transform .5s cubic-bezier(.11,1.46,.63,1.26), opacity .5s cubic-bezier(.11,1.46,.63,1.26);
+        transform: scale(1);
+        opacity: 1;
+
+        &_hidden{
+            transform: scale(.2);
+            opacity: 0;
+        }
+    }
+}
+@keyframes start-pointer-animation {
+    0% {
+        opacity: 1;
+        transform: translate(50px, 50px) rotate(-30deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translate(0, 0) rotate(-20deg);
+    }
+
+    30% {
+        opacity: 1;
+        transform: scale(.9) rotate(-20deg);
+    }
+
+    40% {
+        opacity: 1;
+        transform: scale(1) rotate(-20deg);
+    }
+
+    65%, 100%{
+        opacity: 0;
+        transform: scale(1.2) rotate(-20deg);
+    }
+}
